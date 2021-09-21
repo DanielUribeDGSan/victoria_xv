@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+html,
+body {
+	scroll-behavior: smooth;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.font-cursive {
+	font-family: 'Sriracha', cursive;
+}
+
+#map {
+	width: 100%;
+	height: 70vh;
+}
