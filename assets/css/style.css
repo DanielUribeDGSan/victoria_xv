@@ -24,3 +24,9 @@ body {
 .img-qr {
 	width: 20vw;
 }
+
+@media (max-width: 991px) {
+	.img-qr {
+		width: 65vw;
+	}
+}
