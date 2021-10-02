@@ -30,3 +30,13 @@ body {
 		width: 65vw;
 	}
 }
+
+.ft-1r {
+	font-size: 1.1rem;
+}
+
+@media (max-width: 767px) {
+	.s-64 {
+		font-size: 50px;
+	}
+}
