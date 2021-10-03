@@ -176,7 +176,7 @@ function initMap() {
 
     });
     var icon = {
-        url: "https://firebasestorage.googleapis.com/v0/b/victoria-637cb.appspot.com/o/ubicacion.svg?alt=media&token=01460f25-777b-467f-84c9-24c9ce91b3f2", // url
+        url: "https://firebasestorage.googleapis.com/v0/b/victoria-637cb.appspot.com/o/location.svg?alt=media&token=44cc5723-be96-4a91-9ed8-edb08d1b0fa1", // url
         scaledSize: new google.maps.Size(40, 40), // scaled size
         Origin: new google.maps.Point(0, 0), // Origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -186,7 +186,7 @@ function initMap() {
         position: uluru,
         map: map,
         animation: google.maps.Animation.DROP,
-        title: 'XV años de Victoria',
+        title: 'XVI años de Victoria',
         icon: icon,
     });
 
