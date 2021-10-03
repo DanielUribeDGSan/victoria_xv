@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./assets/css/style.css?ver=1.0.1">
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body class="sidebar-mini sidebar-collapse theme-dark  sidebar-expanded-on-hover has-preloader" style="display: none;">
@@ -94,9 +96,9 @@
     <div id="rekord-app">
 
 
-        <aside class="main-sidebar fixed offcanvas shadow" data-toggle='offcanvas'>
+        <!-- <aside class="main-sidebar fixed offcanvas shadow" data-toggle='offcanvas'>
             <div class="sidebar">
-                <!-- <ul class="sidebar-menu">
+                 <ul class="sidebar-menu">
                     <li><a class="ajaxifyPage active" href="#inicio">
                             <i class="icon-home s-24 mr-2"></i> <span> Inicio</span>
                         </a>
@@ -109,9 +111,9 @@
                             <i class="icon-map-marker s-24 mr-2"></i> <span> Dirección</span>
                         </a>
                     <li>
-                </ul> -->
+                </ul> 
             </div>
-        </aside>
+        </aside>-->
         <!--Sidebar End-->
 
         <!-- Right Sidebar -->
@@ -227,134 +229,51 @@
         <main id="pageContent" class="page has-sidebar">
             <div class="container-fluid relative animatedParent animateOnce p-lg-5">
                 <div class="card no-b shadow no-r">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 b-r">
-                            <div class="text-center p-5 mt-5">
-                                <figure class="avatar avatar-xl">
-                                    <img src="assets/img/demo/u7.jpg" alt="">
-                                </figure>
-                                <div>
-                                    <h4 class="p-t-10">Alexander Pierce</h4>
-                                    alexander@paper.com
-                                </div>
-                                <a href="#" class="btn btn-outline-primary btn-sm  mt-3">Send Email</a>
-                                <div class="mt-5">
-                                    <ul class="social social list-inline">
-                                        <li class="list-inline-item"><a href="#" class="grey-text"><i
-                                                    class="icon-facebook"></i></a>
-                                        </li>
-                                        <li class="list-inline-item"><a href="#" class="grey-text"><i
-                                                    class="icon-youtube"></i></a>
-                                        </li>
-                                        <li class="list-inline-item"><a href="#" class="grey-text"><i
-                                                    class="icon-twitter"></i></a>
-                                        </li>
-                                    </ul>
+                    <div class="row p-4">
+                        <div class="col-md-6">
+                            <div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="familia" placeholder="familia">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-8">
-                            <div class="p5 b-b">
-                                <div class="pl-4 mt-4">
-                                    <h5>Official Information</h5>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="p-4">
-                                            <h4>Email</h4>
-                                            <span>paper_user@panel.com</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="p-4">
-                                            <h4>Phone Number</h4>
-                                            <span>0092-333-456734</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="p-4">
-                                            <h4>Address</h4>
-                                            <span>7C Street, Main Market New York City</span>
-                                        </div>
-                                    </div>
-
+                        <div class="col-md-6">
+                            <div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="adultos" placeholder="Adultos">
                                 </div>
                             </div>
-                            <div class="p5 b-b">
-                                <div class="pl-4 mt-4">
-                                    <h5>Personal Information</h5>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="p-4">
-                                            <h4>Facebook</h4>
-                                            <span>Facebook.com/paper-panel</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="p-4">
-                                            <h4>Phone Number</h4>
-                                            <span>0092-333-456734</span>
-                                        </div>
-                                    </div>
-
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="ninos" placeholder="Niños">
                                 </div>
                             </div>
-
-                            <div class="p-4">
-                                <h4>New Followers</h4>
-                                <ul class="list-inline mt-3">
-                                    <li class="list-inline-item ">
-                                        <img src="assets/img/demo/u13.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u12.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u11.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u10.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u9.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u8.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item ">
-                                        <img src="assets/img/demo/u7.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u6.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u5.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u4.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u3.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u2.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="mesa" placeholder="Mesa">
+                                </div>
                             </div>
-
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="pases" placeholder="pases">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="qr" placeholder="qr">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button id="add_btn" class="btn btn-primary">Registrar</button>
                         </div>
                     </div>
 
@@ -371,6 +290,8 @@
     <script src="./assets/js/app.js"></script>
 
     <script src="./assets/js/loading.js"></script>
+    <script src="./assets/js/conexion.js" type="module"></script>
+    <script src="./assets/js/registro.js" type="module"></script>
 
 
 </body>

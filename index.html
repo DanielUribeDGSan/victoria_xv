@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="./assets/css/style.css?ver=1.0.2">
 
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body class="sidebar-mini sidebar-collapse theme-dark  sidebar-expanded-on-hover has-preloader" style="display: none;">
@@ -306,7 +308,9 @@
 												<div class="col-12 col-lg-6 fadeInRight animated">
 													<div class="xv-slider-content clearfix color-white">
 														<h1 class="s-64 mt-5 font-weight-lighter">Invitación para:</h1>
-														<p class="s-48 font-weight-lighter">Daniel Uribe</p>
+														<p class="s-48 font-weight-lighter text-capitalize"
+															id="familiar">
+														</p>
 														<div class="pt-3">
 															<a href="#invitacion" class="btn btn-primary btn-lg">Ver
 																invitación</a>
@@ -376,7 +380,7 @@
 
 										</div>
 									</div>
-									<div class="card no-b mb-md-3 p-2 mt-3">
+									<div class="card no-b mb-md-3 p-2 mt-3" id="confirmar_invitacion">
 										<div class="card-header no-bg transparent">
 											<div class="d-flex justify-content-between">
 												<div class="align-self-center">
@@ -400,7 +404,8 @@
 												</lottie-player>
 											</div>
 											<div class="d-flex align-items-center justify-content-center mb-2">
-												<a href="#invitacion" class="btn btn-primary btn-lg">Confirmar
+												<a class="btn btn-primary btn-lg"
+													id="confirmar_invitacion_btn">Confirmar
 													invitación</a>
 											</div>
 										</div>
@@ -418,15 +423,15 @@
 												<!-- <small> 33 Cliveden Close, Melbourne VIC 3000, Australia</small> -->
 											</div>
 											<div class="mr-3 float-left text-center">
-												<div class="s-36">09</div>
+												<div class="s-36" id="adultos"></div>
 												<span>Adultos</span>
 											</div>
 											<div class="mr-3 float-left text-center">
-												<div class="s-36">09</div>
+												<div class="s-36" id="ninos"></div>
 												<span>Niños</span>
 											</div>
 											<div class="mr-3 float-left text-center">
-												<div class="s-36">10</div>
+												<div class="s-36" id="mesa"></div>
 												<span>Mesa</span>
 											</div>
 										</div>
@@ -439,8 +444,9 @@
 														<h4 class="text-primary">Qr invitación</h4>
 													</a>
 												</div>
-												<div class="mt-3 d-flex align-items-center justify-content-center">
-													<img class="img-fluid img-qr" src="./assets/img/demo/qr-code.svg" />
+												<div class="mt-3 d-flex align-items-center justify-content-center"
+													id="qr">
+
 												</div>
 											</div>
 										</div>
@@ -522,7 +528,8 @@
 	<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
 	<script src="./assets/js/map.js"></script>
 	<script src="./assets/js/loading.js"></script>
-
+	<script src="./assets/js/conexion.js?ver=1.0.2" type="module"></script>
+	<script src="./assets/js/consultas.js?ver=1.0.2" type="module"></script>
 
 
 </body>
