@@ -64,16 +64,18 @@ function registrarInvitaciones() {
         imageWidth: 300,
         imageHeight: 300,
         imageAlt: 'Custom image',
-        showCancelButton: true,
+        showCloseButton: true,
+        showCancelButton: false,
+        showDenyButton: true,
         confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#ff1744',
+        denyButtonColor: '#ff1744',
         confirmButtonText: 'Si asistire',
-        cancelButtonText: 'No asistire',
+        denyButtonText: `No asistire`,
     }).then((result) => {
         if (result.isConfirmed) {
             updateAsistencia('true');
 
-        } else {
+        } else if (result.isDenied) {
             updateAsistencia('false');
         }
     })
