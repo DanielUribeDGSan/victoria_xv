@@ -59,7 +59,7 @@ boton.addEventListener("click", function (e) {
 function registrarInvitaciones() {
     Swal.fire({
         title: '',
-        text: "¿Podras asistir este 26 de noviembre a los xv años?",
+        text: "¿Podras asistir este 26 de noviembre a los XVI años?",
         imageUrl: 'https://firebasestorage.googleapis.com/v0/b/victoria-637cb.appspot.com/o/29774-dance-party.gif?alt=media&token=13b47e57-c24a-4d4b-bf1b-3cf552275402',
         imageWidth: 300,
         imageHeight: 300,
