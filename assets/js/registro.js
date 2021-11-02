@@ -18,6 +18,9 @@ boton.addEventListener("click", function (e) {
     registrarInvitaciones();
 });
 
+const removeAccents = (str) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
 
 async function registrarInvitaciones() {
     const familia = document.querySelector('#familia').value;
@@ -39,7 +42,7 @@ async function registrarInvitaciones() {
     }
 
     // Create an initial document to update.
-    const invitacionDocRef = doc(db, "col-invitaciones", documento);
+    const invitacionDocRef = doc(db, "col-invitaciones", removeAccents(documento));
     await setDoc(invitacionDocRef, {
         familia: familia,
         code: qr,
