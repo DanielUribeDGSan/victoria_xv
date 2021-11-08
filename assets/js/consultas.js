@@ -15,7 +15,11 @@ const getQueryVariable = (variable) => {
     return (false);
 }
 
-const consulta = doc(db, "col-invitaciones", getQueryVariable("invitacion"));
+const valores = window.location.search;
+const urlParams = new URLSearchParams(valores);
+var invitacionParam = urlParams.get('invitacion');
+
+const consulta = doc(db, "col-invitaciones", invitacionParam);
 const validar = await getDoc(consulta);
 
 
@@ -25,7 +29,7 @@ if (!validar.exists()) {
 }
 
 const invitacion = onSnapshot(
-    doc(db, "col-invitaciones", getQueryVariable("invitacion")),
+    doc(db, "col-invitaciones", invitacionParam),
     { includeMetadataChanges: true },
     (doc) => {
         const familiar = document.querySelector('#familiar');
@@ -82,7 +86,7 @@ function registrarInvitaciones() {
 
 }
 async function updateAsistencia(value) {
-    const documento = doc(db, "col-invitaciones", getQueryVariable("invitacion"));
+    const documento = doc(db, "col-invitaciones", invitacionParam);
     if (value == 'true') {
         await updateDoc(documento, {
             asistencia: 'true'
