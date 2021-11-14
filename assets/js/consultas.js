@@ -85,12 +85,15 @@ function registrarInvitaciones() {
     })
 
 }
-async function updateAsistencia(value) {
-    const documento = doc(db, "col-invitaciones", invitacionParam);
+function updateAsistencia(value) {
+
+    const documento = db.collection("col-invitaciones").doc(invitacionParam);
     if (value == 'true') {
-        await updateDoc(documento, {
+
+        // Set the "capital" field of the city 'DC'
+        return documento.update({
             asistencia: 'true'
-        }).then(function () {
+        }).then(() => {
             Swal.fire({
                 title: "Genial 🎉",
                 text: "Te esperamos el viernes 26 de septiembre del 2021 a partir de las 8:30 pm 🍻",
@@ -100,11 +103,16 @@ async function updateAsistencia(value) {
                 imageAlt: "Custom image",
                 confirmButtonText: "👍🏻",
             });
+        }).catch((error) => {
+            // The document probably doesn't exist.
+            console.error("Error updating document: ", error);
         });
+
+
     } else {
-        await updateDoc(documento, {
+        return documento.update({
             asistencia: 'false'
-        }).then(function () {
+        }).then(() => {
             Swal.fire({
                 title: "😕",
                 text: "Lamentamos que no nos puedan acompañar, ya será en otra ocasión",
@@ -114,7 +122,11 @@ async function updateAsistencia(value) {
                 imageAlt: "Custom image",
                 confirmButtonText: "Aceptar",
             });
+        }).catch((error) => {
+            // The document probably doesn't exist.
+            console.error("Error updating document: ", error);
         });
+
     }
 }
 
