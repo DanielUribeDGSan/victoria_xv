@@ -1,7 +1,4 @@
-// Import the functions you need from the SDKs you need
 
-import { collection, query, getFirestore, doc, onSnapshot, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
-const db = getFirestore();
 //Consultas
 const getQueryVariable = (variable) => {
     var query = window.location.search.substring(1);
@@ -19,19 +16,20 @@ const valores = window.location.search;
 const urlParams = new URLSearchParams(valores);
 var invitacionParam = urlParams.get('invitacion');
 
-const consulta = doc(db, "col-invitaciones", invitacionParam);
-const validar = await getDoc(consulta);
+// const consulta = doc(db, "col-invitaciones", invitacionParam);
+// const validar = await getDoc(consulta);
 
 
-if (!validar.exists()) {
+// if (!validar.exists()) {
 
-    console.log("Invitación fake");
-}
+//     console.log("Invitación fake");
+// }
 
-const invitacion = onSnapshot(
-    doc(db, "col-invitaciones", invitacionParam),
-    { includeMetadataChanges: true },
-    (doc) => {
+db.collection("col-invitaciones").doc(invitacionParam)
+    .onSnapshot({
+        // Listen for document metadata changes
+        includeMetadataChanges: true
+    }, (doc) => {
         const familiar = document.querySelector('#familiar');
         const adultos = document.querySelector('#adultos');
         const ninos = document.querySelector('#ninos');
@@ -53,6 +51,8 @@ const invitacion = onSnapshot(
 
         }
     });
+
+
 
 const boton = document.querySelector("#confirmar_invitacion_btn");
 
