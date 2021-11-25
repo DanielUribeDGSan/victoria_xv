@@ -14,12 +14,19 @@
     <link rel="stylesheet" href="./assets/css/style.css?ver=1.0.1">
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .swal2-title {
+            color: #fff !important;
+        }
+    </style>
 </head>
 
 <body class="sidebar-mini sidebar-collapse theme-dark  sidebar-expanded-on-hover has-preloader" style="display: none;">
     <!-- Pre loader
   To disable preloader remove 'has-preloader' from body
  -->
+
     <div id="loader" class="loader">
         <div class="loader-container">
             <div class="preloader-wrapper big active">
@@ -225,10 +232,9 @@
 
         <!--Page Content-->
         <main id="pageContent" class="page has-sidebar">
-            <div class="container-fluid relative animatedParent animateOnce p-lg-5 d-flex align-items-center justify-content-center"
-                style="min-height: 100vh;">
-                <h1 class="text-center">NO TIENES PERMISO PARA VER ESTO</h1>
-                <!-- <div class="card no-b shadow no-r">
+            <div class="container-fluid relative animatedParent animateOnce p-lg-5 " style="min-height: 100vh;">
+                <!-- <h1 class="text-center">NO TIENES PERMISO PARA VER ESTO</h1> -->
+                <div class="card no-b shadow no-r" style="min-height: 80vh !important;">
                     <div class="row no-gutters">
                         <div class="col-md-4 b-r">
                             <div class="text-center p-5 mt-5">
@@ -236,139 +242,263 @@
                                     <img src="assets/img/demo/u7.jpg" alt="">
                                 </figure>
                                 <div>
-                                    <h4 class="p-t-10">Alexander Pierce</h4>
-                                    alexander@paper.com
+                                    <h2 class="p-t-10" id="familia">
+                                        </h1>
                                 </div>
-                                <a href="#" class="btn btn-outline-primary btn-sm  mt-3">Send Email</a>
-                                <div class="mt-5">
-                                    <ul class="social social list-inline">
-                                        <li class="list-inline-item"><a href="#" class="grey-text"><i
-                                                    class="icon-facebook"></i></a>
-                                        </li>
-                                        <li class="list-inline-item"><a href="#" class="grey-text"><i
-                                                    class="icon-youtube"></i></a>
-                                        </li>
-                                        <li class="list-inline-item"><a href="#" class="grey-text"><i
-                                                    class="icon-twitter"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
+
                             </div>
                         </div>
                         <div class="col-md-8">
                             <div class="p5 b-b">
-                                <div class="pl-4 mt-4">
-                                    <h5>Official Information</h5>
-                                </div>
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4 col-md-6 col-6">
                                         <div class="p-4">
-                                            <h4>Email</h4>
-                                            <span>paper_user@panel.com</span>
+                                            <h2 class="text-primary">Pases</h1>
+                                                <h3 id="pases"></h3>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-lg-4 col-md-6 col-6">
                                         <div class="p-4">
-                                            <h4>Phone Number</h4>
-                                            <span>0092-333-456734</span>
+                                            <h2 class="text-primary">Adultos</h1>
+                                                <h3 id="adultos"></h3>
                                         </div>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-lg-4 col-md-6 col-6">
                                         <div class="p-4">
-                                            <h4>Address</h4>
-                                            <span>7C Street, Main Market New York City</span>
+                                            <h2 class="text-primary">Niños</h1>
+                                                <h3 id="ninos"></h3>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-4 col-md-6 col-6">
+                                        <div class="p-4">
+                                            <h2 class="text-primary">Mesa</h1>
+                                                <h3 id="mesa"></h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-12 col-12">
+                                        <div class="p-4">
+                                            <h2 class="text-primary">Pases restantes</h1>
+                                                <h3 id="restantes"></h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center justify-content-center mt-2 pb-3">
+                                            <a class="btn btn-primary btn-lg" onclick="cancelarInvitacion()">Utilizar
+                                                invitación</a>
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
-                            <div class="p5 b-b">
-                                <div class="pl-4 mt-4">
-                                    <h5>Personal Information</h5>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="p-4">
-                                            <h4>Facebook</h4>
-                                            <span>Facebook.com/paper-panel</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="p-4">
-                                            <h4>Phone Number</h4>
-                                            <span>0092-333-456734</span>
-                                        </div>
-                                    </div>
 
-                                </div>
-                            </div>
-
-                            <div class="p-4">
-                                <h4>New Followers</h4>
-                                <ul class="list-inline mt-3">
-                                    <li class="list-inline-item ">
-                                        <img src="assets/img/demo/u13.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u12.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u11.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u10.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u9.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u8.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item ">
-                                        <img src="assets/img/demo/u7.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u6.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u5.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u4.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u3.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/demo/u2.png" alt=""
-                                            class="img-responsive w-40px circle mb-3">
-                                    </li>
-                                </ul>
-                            </div>
 
                         </div>
-                    </div> -->
+                    </div>
+
+                </div>
 
             </div>
 
-    </div>
-
-    </main>
-    <!--@Page Content-->
+        </main>
+        <!--@Page Content-->
     </div>
     <!--@#rekord-app-->
     <!--/#rekord-app -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
+
+    <script src="./assets/js/conexion.js?ver=1.0.12"></script>
+    <script>
+        var acceso = "";
+        var pases = 0;
+        var total_pases = 0;
+
+        const getQueryVariable = (variable) => {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                    return pair[1];
+                }
+            }
+            return (false);
+        }
+
+        const valores = window.location.search;
+        const urlParams = new URLSearchParams(valores);
+        var invitacionParam = urlParams.get('invitacion');
+
+        db.collection("col-invitaciones").doc('contrasenia')
+            .onSnapshot({
+                // Listen for document metadata changes
+                includeMetadataChanges: true
+            }, (doc) => {
+                (async () => {
+                    const { value: password } = await Swal.fire({
+                        title: 'Ingresa la contraseña',
+                        input: 'password',
+                        inputPlaceholder: '',
+                        confirmButtonText: 'Entrar',
+                        allowOutsideClick: false,
+                        inputAttributes: {
+                            maxlength: 10,
+                            autocapitalize: 'off',
+                            autocorrect: 'off'
+                        }, inputValidator: (value) => {
+                            if (value != doc.data().password) {
+                                return 'Contraseña incorrecta'
+                            }
+                        }
+                    });
+
+
+
+                    if (password == doc.data().password) {
+                        acceso = doc.data().password;
+                        // Mostrar Invitacion
+
+
+
+                        db.collection("col-invitaciones").doc(invitacionParam).get().then((doc_inv) => {
+
+                            document.querySelector('#familia').innerHTML = doc_inv.data().familia;
+                            document.querySelector('#pases').innerHTML = doc_inv.data().pases;
+                            document.querySelector('#adultos').innerHTML = doc_inv.data().adultos;
+                            document.querySelector('#ninos').innerHTML = doc_inv.data().ninos;
+                            document.querySelector('#mesa').innerHTML = doc_inv.data().mesa;
+                            document.querySelector('#restantes').innerHTML = doc_inv.data().totalPases;
+                            pases = doc_inv.data().pases;
+                            total_pases = doc_inv.data().totalPases;
+                            if (doc_inv.data().totalPases == 0) {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Invitación utilizada',
+                                    text: 'No dejes pasar a estas personas, ya que la invitación ya fue usada',
+                                    showCancelButton: false,
+                                    showConfirmButton: false,
+                                    allowOutsideClick: false,
+                                })
+                            }
+                        });
+                    } else {
+                        return false;
+                    }
+
+                })()
+
+
+            });
+
+        var validation = db.collection("col-invitaciones").doc('contrasenia');
+        var invitacion_col = db.collection("col-invitaciones").doc(invitacionParam);
+
+        const cancelarInvitacion = () => {
+
+            validation.get().then((doc) => {
+                if (acceso == doc.data().password) {
+                    (async () => {
+
+                        const { value: pregunta } = await Swal.fire({
+                            title: '¿Aún faltan personas de esta invitación ?',
+                            input: 'select',
+                            inputOptions: {
+                                'si': 'Si',
+                                'no': 'No',
+                            },
+                            inputPlaceholder: 'Selecciona una opción',
+                            showCancelButton: false,
+                            confirmButtonText: 'Siguiente',
+                            inputValidator: (value) => {
+
+                                console.log(value);
+                                if (value == 'si') {
+
+                                    (async () => {
+                                        const { value: personas } = await Swal.fire({
+                                            title: '¿Cuántas personas faltan?',
+                                            input: 'number',
+                                            inputPlaceholder: '',
+                                            confirmButtonText: 'Siguiente',
+                                            allowOutsideClick: false,
+                                            inputAttributes: {
+                                                maxlength: 10,
+                                                autocapitalize: 'off',
+                                                autocorrect: 'off'
+                                            }, inputValidator: (value) => {
+                                                if (!value) {
+                                                    return 'Es necesario que especifiques cuantas faltan'
+                                                } else if (value > total_pases) {
+                                                    return `Error de número de pases, no tiene esa cantidad de pases, el invitado solo tiene ${total_pases} pases`
+                                                }
+                                            }
+                                        });
+
+
+                                        invitacion_col.update({
+                                            totalPases: total_pases - parseInt(personas),
+                                            pasesGastados: parseInt(personas),
+                                        }).then(() => {
+                                            Swal.fire({
+                                                title: 'Invitación utilizada con éxito',
+                                                text: 'Puedes dejarlos entrar',
+                                                imageUrl: 'https://firebasestorage.googleapis.com/v0/b/victoria-637cb.appspot.com/o/11272-party-popper.gif?alt=media&token=4c1d7634-b711-4613-a80a-f7e95cf23729',
+                                                imageWidth: 400,
+                                                imageHeight: 200,
+                                                confirmButtonText: 'Aceptar',
+                                                imageAlt: 'Custom image',
+                                            });
+                                        }).catch((error) => {
+                                            // The document probably doesn't exist.
+                                            console.error("Error updating document: ", error);
+                                        });
+
+
+                                    })()
+
+                                } else if (value == 'no') {
+
+                                    invitacion_col.update({
+                                        totalPases: 0,
+                                        pasesGastados: parseInt(pases),
+                                    }).then(() => {
+                                        Swal.fire({
+                                            title: 'Invitación utilizada con éxito',
+                                            text: 'Puedes dejarlos entrar',
+                                            imageUrl: 'https://firebasestorage.googleapis.com/v0/b/victoria-637cb.appspot.com/o/11272-party-popper.gif?alt=media&token=4c1d7634-b711-4613-a80a-f7e95cf23729',
+                                            imageWidth: 400,
+                                            imageHeight: 200,
+                                            confirmButtonText: 'Aceptar',
+                                            imageAlt: 'Custom image',
+                                        });
+                                    }).catch((error) => {
+                                        // The document probably doesn't exist.
+                                        console.error("Error updating document: ", error);
+                                    });
+
+                                }
+
+                            }
+                        })
+
+
+
+                    })()
+
+                }
+            }).catch((error) => {
+                console.log("Error getting document:", error);
+            });
+
+
+        }
+    </script>
 
     <script src="./assets/js/app.js"></script>
 
